@@ -15,8 +15,9 @@
     <fabric8.version>2.3.5</fabric8.version>
     <fabric8.maven.plugin.version>3.5.28</fabric8.maven.plugin.version>
 
-    <version.furnace>2.25.4.Final</version.furnace>
-    <version.forge>3.6.1.Final</version.forge>
+    <version.furnace>2.62.2.Final</version.furnace>
+    <version.forge>3.7.2.Final</version.forge>
+    <version.resteasy.client>3.0.8.Final</version.resteasy.client>
     <version.wildfly-swarm>2017.3.3</version.wildfly-swarm>
     <fabric8-forge.version>2.3.90</fabric8-forge.version>
     <version.vertx>1.2.1</version.vertx>
@@ -205,7 +206,12 @@
   </dependencyManagement>
 
   <dependencies>
-    <!--START::Added dependencies Aquilian testing-->
+    <dependency>
+      <groupId>org.jboss.resteasy</groupId>
+      <artifactId>resteasy-client</artifactId>
+      <version>${version.resteasy.client}</version>
+    </dependency>
+    <!--START::Added dependencies Aquillian testing-->
     <dependency>
       <groupId>org.jboss.forge.addon</groupId>
       <artifactId>ui-test-harness</artifactId>
@@ -248,7 +254,7 @@
       <version>${version.shrinkwrap-maven-resolver}</version>
       <scope>test</scope>
     </dependency>
-    <!--END::Added dependencies Aquilian testing-->
+    <!--END::Added dependencies Aquillian testing-->
 
     <dependency>
       <groupId>org.kohsuke</groupId>
